@@ -7,7 +7,7 @@ import apiRouter from "./src/routes/api.js";
 
 const app = express();
 const port = 3000;
-const API_URL = "http://localhost:3000/api/";
+const API_URL = "http://localhost:3000/api2/";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -18,7 +18,7 @@ app.set('views', path.join(__dirname, 'src/views'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.use("/api", apiRouter);
+app.use("/api2", apiRouter);
 
 // Route to render the main page
 app.get("/", async (req, res) => {
